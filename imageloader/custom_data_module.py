@@ -40,12 +40,6 @@ def find_list_raw(data, finds):
     return data_find(data, finds)
 
 
-def find_body_raw(filename, data, finds):
-    urls = data_find(data, finds)
-    for url in urls:
-        write_file_url(filename, url, url)
-
-
 def data_find(data, finds):
     result = []
     for m in re.finditer(finds, data):
